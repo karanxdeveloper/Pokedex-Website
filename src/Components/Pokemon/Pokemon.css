@@ -17,10 +17,11 @@
     background-color: burlywood;
 }
 .pokemon-name{
-    letter-spacing: 10px;
+    letter-spacing: 8px;
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 1rem;
+    text-transform: uppercase;
 }
 
 .pokemon-image-container{
