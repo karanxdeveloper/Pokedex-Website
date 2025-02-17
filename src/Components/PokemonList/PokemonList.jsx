@@ -8,7 +8,7 @@ import usePokemonList from "../../Hooks/usePokemonList";
 function PokemonList() {
    
 
-    const [pokemonList,prevUrl,nextUrl,setPokemonUrl] = usePokemonList()
+    const  [pokemonListState,setPokemonListState] = usePokemonList()
 
     return (
         <>
@@ -20,13 +20,13 @@ function PokemonList() {
                 </div>
 
                 <div className="page-btns">
-                    <button className="prev-btn" onClick={()=>setPokemonUrl(prevUrl)}>Prev</button>
-                    <button className="next-btn" onClick={()=>setPokemonUrl(nextUrl)}>Next</button>
+                    <button className="prev-btn" onClick={()=>setPokemonListState({...pokemonListState,pokemonUrl:pokemonListState.prevUrl})}>Prev</button>
+                    <button className="next-btn" onClick={()=>setPokemonListState({...pokemonListState,pokemonUrl:pokemonListState.nextUrl})}>Next</button>
                 </div>
 
 
                 <div className="pokemon-container">
-                    {pokemonList.map((pokemon) => <Pokemon name={pokemon.name} key={pokemon.id} url={pokemon.image} id={pokemon.id}/>)}
+                    {pokemonListState.pokemonList.map((pokemon) => <Pokemon name={pokemon.name} key={pokemon.id} url={pokemon.image} id={pokemon.id}/>)}
                 </div>
 
             </div>
