@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import downloadPokemons from "../utils/DownloadPokemons"
+import downloadPokemons from "../utils/downloadPokemons"
 
 function usePokemonList() {
 
