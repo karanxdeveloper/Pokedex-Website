@@ -1,6 +1,6 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
-import downloadPokemons from "../utils/DownloadPokemons"
+import downloadPokemons from "../utils/downloadPokemons"
 
 function usePokemonDetails(id,defaultUrl) {
 
@@ -36,7 +36,7 @@ function usePokemonDetails(id,defaultUrl) {
 
     async function downloadPokemonAndRelated(id){
       const type = await downloadGivenPokemon(id)
-      await downloadPokemons(pokemonListState,setPokemonListState,`https://pokeapi.co/api/v2/type/${type}`)
+       downloadPokemons(pokemonListState,setPokemonListState,`https://pokeapi.co/api/v2/type/${type}`)
     }
   
     useEffect(() => {
