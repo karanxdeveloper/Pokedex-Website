@@ -10,7 +10,7 @@ function Search({updateSearchTerm}) {
 
         <input className="search-input"
          type="text"
-         placeholder="gonna search them all..."
+         placeholder="Gonna search them all..."
          onChange={debounceUpdateSearch}
          />
     </div>

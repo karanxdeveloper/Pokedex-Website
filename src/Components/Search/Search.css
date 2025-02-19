@@ -10,6 +10,27 @@
     width:45%;
     height: 55px;
     box-sizing: border-box;
-    padding: 5px;
-    font-size: 1rem;
+    padding: 8px;
+    font-size: 1.2rem;
+    border-radius: 12px;
+    outline: none;
+    border: none;
+}
+
+@media (max-width:768px) {
+    .search-input-container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+    }
+    
+    .search-input{
+        width:65%;
+        height: 55px;
+        box-sizing: border-box;
+        padding: 5px;
+        font-size: 1rem;
+    }
 }
