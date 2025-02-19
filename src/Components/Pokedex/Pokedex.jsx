@@ -1,20 +1,27 @@
+import { useState } from "react";
 import PokemonList from "../PokemonList/PokemonList";
 import Search from "../Search/Search";
 import "./Pokedex.css"
+import PokemonDetails from "../PokemonDetails/PokemonDetails";
 
 
 
 function Pokedex() {
 
+    const [searchTerm, setSearchTerm] = useState("")
+
   return (
     <>
-    <div className="pokedex-wrapper">
+      <div className="pokedex-wrapper">
 
-      <h1>Pokedex</h1>
-      <Search />
+        <h1>Pokedex</h1>
+        <Search updateSearchTerm={setSearchTerm}/>
 
-    </div>
-    <PokemonList/>
+        {searchTerm ? <PokemonDetails pokemonName={searchTerm}/>  : <PokemonList />}
+
+      </div>
+
+    
     </>
   )
 

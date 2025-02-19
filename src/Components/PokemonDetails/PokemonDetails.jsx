@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom"
+import { Link } from "react-router-dom"
 import "./PokemonDetails.css"
 import Pokemon from "../Pokemon/Pokemon"
 
@@ -6,11 +6,11 @@ import Pokemon from "../Pokemon/Pokemon"
 import usePokemonDetails from "../../Hooks/usePokemonDetails"
 
 
-function PokemonDetails() {
+function PokemonDetails({pokemonName}) {
 
-  const { id } = useParams()
+  // const { id } = useParams()
 
-const [pokemon,pokemonListState] = usePokemonDetails(id)
+const [pokemon,pokemonListState] = usePokemonDetails(pokemonName)
 
   return (<>
 
